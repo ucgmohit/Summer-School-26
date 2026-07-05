@@ -1,17 +1,23 @@
-int led=12;
-int count=0;
-void setup()
-{
-  pinMode(led,OUTPUT);
+int count = 0;
+
+void setup() {
+  pinMode(13, OUTPUT);
   Serial.begin(9600);
 }
 
-void loop()
-{
-  digitalWrite(led, HIGH);
-  delay(500); 
-  digitalWrite(led, LOW);
-  delay(500); 
+void loop() {
+
+  int sensor = analogRead(A0);
+
+  int speed = map(sensor, 0, 1023, 100, 1000);
+
+  digitalWrite(13, HIGH);
+  delay(speed);
+  digitalWrite(13, LOW);
+  delay(speed);
+
   count++;
-Serial.print(count);
+
+  Serial.print("Blink count: ");
+  Serial.println(count);
 }
