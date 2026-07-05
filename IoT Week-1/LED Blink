@@ -1,4 +1,12 @@
+/*
+Author: Mohit Kumar
+Date: 05 July 2026
+Description:
+LED Blink using potentiometer to control blink speed.
+Displays blink count on the Serial Monitor.
+*/
 int count = 0;
+
 
 void setup() {
   pinMode(13, OUTPUT);
