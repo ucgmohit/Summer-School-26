@@ -12,6 +12,9 @@ void setup() {
   pinMode(btnFa, INPUT_PULLUP);
 }
 
+
+  }
+
 void loop() {
 
   if (digitalRead(btnDo) == LOW) {
@@ -32,6 +35,3 @@ void loop() {
 
   else {
     noTone(buzzer);
-  }
-
-}
