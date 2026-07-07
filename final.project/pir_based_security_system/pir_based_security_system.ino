@@ -1,8 +1,3 @@
-/*
-  PIR Based Security System
-  Tinkercad Version
-*/
-
 #define PIR_PIN 2
 #define POT_PIN A0
 
